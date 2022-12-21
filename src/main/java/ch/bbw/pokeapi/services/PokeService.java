@@ -31,6 +31,7 @@ public class PokeService {
     }
 
     public void addPokemon(LikedPokemon likedPokemon) {
+        likedPokemon.setDateTime(Date.valueOf(LocalDate.now()));
         repo.save(likedPokemon);
     }
 }
