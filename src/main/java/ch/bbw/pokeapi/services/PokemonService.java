@@ -3,7 +3,7 @@ package ch.bbw.pokeapi.services;
 import ch.bbw.pokeapi.model.Move;
 import ch.bbw.pokeapi.model.Pokemon;
 import ch.bbw.pokeapi.repositories.MoveRepo;
-import ch.bbw.pokeapi.repositories.PokeRepo;
+import ch.bbw.pokeapi.repositories.PokemonRepo;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -16,7 +16,7 @@ import java.util.Optional;
 @Service
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PokemonService {
-    private final PokeRepo pokeRepo;
+    private final PokemonRepo pokeRepo;
     private final MoveRepo moveRepo;
 
     public List<Pokemon> getPokemon() {

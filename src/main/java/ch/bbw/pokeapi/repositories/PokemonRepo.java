@@ -1,6 +1,6 @@
 package ch.bbw.pokeapi.repositories;
 
-import ch.bbw.pokeapi.model.LikedPokemon;
+import ch.bbw.pokeapi.model.Pokemon;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Repository
-public interface PokeRepo extends JpaRepository<LikedPokemon, UUID> {
+public interface PokemonRepo extends JpaRepository<Pokemon, Long> {
 
-    List<LikedPokemon> findAllByDateTime(Date time);
+    List<Pokemon> findAllByDateTime(Date time);
 }
